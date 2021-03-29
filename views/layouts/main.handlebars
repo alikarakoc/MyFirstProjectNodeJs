@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nodejs Projem</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <a class="navbar-brand" href="/anasayfa">{{title}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item {{#if active.anasayfa}}active{{/if}}">
+                    <a class="nav-link" href="/anasayfa">Anasayfa</a>
+                </li>
+                <li class="nav-item {{#if active.hakkimda}}active{{/if}}">
+                    <a class="nav-link" href="/hakkimda">Hakkımda</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Arayın..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{{body}}}
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/bootstrap.js" type="text/javascript"></script>
+
+</html>
